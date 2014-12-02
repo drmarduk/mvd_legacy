@@ -1,0 +1,32 @@
+RewriteEngine on
+RewriteBase /musikverein/
+RewriteRule ^$ index.php?mode=index
+RewriteRule ^index$ index.php?mode=index
+RewriteRule ^view/(.*)$ index.php?mode=view&id=$1
+RewriteRule ^insert$ index.php?mode=insert
+RewriteRule ^login$ index.php?mode=login
+RewriteRule ^search$ index.php?mode=search
+RewriteRule ^search/submit$ index.php?mode=search&search=true
+RewriteRule ^edit/(.*)$ index.php?mode=edit&id=$1
+RewriteRule ^delete/(.*)$ index.php?mode=delete&id=$1
+RewriteRule ^upload$ index.php?mode=upload
+RewriteRule ^input$ index.php?mode=input
+RewriteRule ^input/submit$ index.php?mode=input&submit=true
+RewriteRule ^input/delete$ index.php?mode=input&delete=true
+RewriteRule ^sort$ index.php?mode=sort
+RewriteRule ^sort/submit$ index.php?mode=sort&submit=true
+RewriteRule ^sort/delete$ index.php?mode=sort&delete=true
+RewriteRule ^sort/queue$ index.php?mode=sort&queue=true
+RewriteRule ^stimmen$ index.php?mode=stimmen
+RewriteRule ^stimmen/insert$ index.php?mode=stimmen&insert=true
+RewriteRule ^stimmen/change$ index.php?mode=stimmen&change=true
+RewriteRule ^stimmen/delete$ index.php?mode=stimmen&delete=true
+RewriteRule ^list$ index.php?mode=list
+RewriteRule ^stats$ index.php?mode=stats
+RewriteRule ^planer$ index.php?mode=planer
+RewriteRule ^planer/view/(.*)/addnoten$ index.php?mode=planer&view=true&addnoten=true&r_id=$1
+RewriteRule ^planer/view/(.*)$ index.php?mode=planer&view=true&r_id=$1
+RewriteRule ^planer/deletenoten/(.*)/(.*)$ index.php?mode=planer&deletenoten=true&r_id=$1&n_id=$2
+RewriteRule ^planer/deleterepertoire/(.*)$ index.php?mode=planer&deleterepertoire=true&r_id=$1
+RewriteRule ^planer/new$ index.php?mode=planer&new=true
+RewriteRule ^rating/(.*)/(.*)/(.*)/(.*)$ index.php?mode=rating&s=$1&noten_id=$2&stimmen_id=$3&rating=$4

@@ -1,0 +1,22 @@
+<div id="main">
+	<p>
+	Suche nach Titel, Komponist, Jahr (Zeitraum), Genre, Gesangstitel, Repertoire:
+	</p>
+        <form method="post" action="###URL###/search/submit" name="search">
+            Nach was soll gesucht werden:
+            <select name="option">
+                <option value="titel">Titel</option>
+                <option value="komponist">Komponist</option>
+                <option value="year">Jahr</option>
+                <option value="genre">Genre</option>
+                <option value="gesang">nur Gesangstitel</option>
+                <option value="repertoire">Titel im Repertoire</option>
+            </select>
+            Suchwort: <input type="text" name="query" />
+            <input type="submit" name="submit" value="submit" />
+        </form>
+        <div id="result">
+             ###SEARCHRESULT###
+        </div>
+
+</div>

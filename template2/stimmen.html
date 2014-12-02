@@ -1,0 +1,35 @@
+<div id="main">
+   <li> ###ERROR###</li>
+   
+    Neue Stimme hinzufügen:
+    <form action="###URL###/stimmen/insert" method="post" name="insert">
+        <label for="stimme">Stimme</label>
+        <input type="text" name="stimme" />
+        <input type="submit" value="Stimme hinzufügen" />
+    </form>
+    <hr />
+    Vorhandene Stimme ändern:
+    <form action="###URL###/stimmen/change" method="post" name="change">
+        <label for="neuername">neue Stimme</label>
+        <input type="text" id="neuername" name="neuername" />
+        <label for="alte">alte Stimme</label>
+        <select name="alte" id="alte" >###STIMMEN###</select>
+        <input type="submit" value="Stimme ändern" />
+    </form>
+    <hr />
+    Stimme löschen:
+    <form action="###URL###/stimmen/delete" method="post" name="delete">
+        <label for="stimme">neue Stimme</label>
+        <select name="stimme">###STIMMEN###</select>
+        <input type="submit" value="Stimme löschen" />
+    </form>
+    <hr />
+    vorhandene Stimmen:
+    <ol>
+        ###STIMMEN2###
+    </ol>
+    geordnete Stimmen:
+    <ol>
+        ###STIMMEN3###
+    </ol>
+</div>
